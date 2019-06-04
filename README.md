@@ -1,6 +1,7 @@
 # PiedPiper CppLint Function
+[![Build Status](https://travis-ci.org/AFCYBER-DREAM/piedpiper-cpplint-faas.svg?branch=master)](https://travis-ci.org/AFCYBER-DREAM/piedpiper-cpplint-faas)
 
-PiedPiper CppLint 
+PiedPiper CppLint
 
 ### Table of Contents
 
@@ -18,7 +19,9 @@ PiedPiper CppLint
 
 ## Getting Started
 
-To deploy this function you must have OpenFaaS installed. To create a development environment see (https://github.com/AFCYBER-DREAM/ansible-collection-pidev)
+To deploy this function you must have OpenFaaS installed. To create a
+development environment see
+(https://github.com/AFCYBER-DREAM/ansible-collection-pidev)
 
 ### Prerequisites
 
@@ -43,10 +46,12 @@ faas ls
 
 ## Inputs and Outputs
 
-This function expects to receive its data via an HTTP POST request. The format of the request should be as follows:
+This function expects to receive its data via an HTTP POST request. The format
+of the request should be as follows:
 
 1. A zipfile containing the files to be linted
-2. A run_vars.yml file, in the root of the zipfile which looks like the following:
+2. A run_vars.yml file, in the root of the zipfile which looks like the
+   following:
 
 ```yaml
 ci:
@@ -81,8 +86,8 @@ then perform a `cpplint` and return any stdout and stderr to the user.
 
 ## Running the tests
 
-Currently we only have functional tests and linting tests for this
-repository. These tests can be run by invoking tox.
+Currently we only have functional tests and linting tests for this repository.
+These tests can be run by invoking tox.
 
 ```bash
 tox -e lint # OR
@@ -96,23 +101,32 @@ Tox must be installed and an OpenFaaS environment must be available locally.
 You must also deploy the image to OpenFaaS.
 
 There is an simple bash script which can be used to turn a local machine into
-an OpenFaaS development environment. This can be found in `tools/scripts/setup-env.sh`.
-This is the script that is being used by Travis-CI to deploy the test environment.
+an OpenFaaS development environment. This can be found in
+`tools/scripts/setup-env.sh`. This is the script that is being used by
+Travis-CI to deploy the test environment.
 
-We also have an ansible role available to setup the OpenFaaS environment. This 
+We also have an ansible role available to setup the OpenFaaS environment. This
 can be found [here](https://github.com/AFCYBER-DREAM/ansible-collection-pidev)
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/AFCYBER-DREAM/piedpiper-picli) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/AFCYBER-DREAM/piedpiper-picli)
+for details on our code of conduct, and the process for submitting pull
+requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/piedpiper-cpplint-faas/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available,
+see the
+[tags on this repository](https://github.com/piedpiper-cpplint-faas/tags).
 
 ## Authors
 
-See also the list of [contributors](https://github.com/AFCYBER-DREAM/piedpiper-cpplint-faas/contributors) who participated in this project.
+See also the list of
+[contributors](https://github.com/AFCYBER-DREAM/piedpiper-cpplint-faas/contributors)
+who participated in this project.
 
 ## License
+
 MIT
+
